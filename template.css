@@ -1,0 +1,23 @@
+.site-main {
+  max-width: 960px;
+  margin: 0 auto; }
+  .site-main::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .site-main h1 {
+    width: calc(16.66667% - 23.33333px);
+    float: left;
+    margin-left: 20px;
+    margin-left: calc(8.33333% - 21.66667px + 40px);
+    text-align: center; }
+
+body {
+  background-color: #000000;
+  color: #ffffff; }
+
+body {
+  font-family: "Helvetica", sans-serif;
+  font-weight: 100; }
+
+/*# sourceMappingURL=template.css.map */

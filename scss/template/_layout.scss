@@ -1,0 +1,87 @@
+$desktop-grid: (
+  columns: 12,
+  gutter: 20px,
+  media: 1000px
+);
+
+$tablet-grid: (
+    columns: 12,
+    gutter: 20px,
+    media: 400px
+);
+
+span.desktop-only {
+    display:none;
+    @include grid-media($desktop-grid) {
+        display: inline;
+    }
+}
+
+span.desktop-tablet-only {
+    display:none;
+    @include grid-media($desktop-grid) {
+        display: inline;
+    }
+    @include grid-media($tablet-grid) {
+        display: inline;
+    }
+}
+
+span.mobile-only {
+    display:inline;
+    @include grid-media($desktop-grid) {
+        display: none;
+    }
+    @include grid-media($tablet-grid) {
+        display: none;
+    }
+}
+
+html, body, div.site {
+    height:100%;
+    overflow: hidden;
+}
+
+.site-main {
+    div#content {
+        @include grid-container;
+    }
+}
+
+.page-template-construction-page {
+    animation-name: fade-in;
+    animation-duration: 4s;
+    div#content {
+        position:absolute;
+        top:calc(33%);
+        .centered-logo {
+            @include grid-column(12);
+            margin-bottom:2rem;
+            @include grid-media($tablet-grid) {
+                @include grid-column(10);
+                @include grid-push(1);
+            }
+            @include grid-media($desktop-grid) {
+                @include grid-column(6);
+                @include grid-push(3);
+            }
+            img {
+                @include filter(grayscale(50%));
+                width:100%;
+            }
+            &:after {
+                clear:both;
+            }
+        }
+        .contact {
+            @include grid-column(12);
+            text-align: center;
+            font-size: 12px;
+            font-size: .8rem;
+            @include grid-media($tablet-grid) {
+                font-size: 16px;
+                font-size: 1rem;
+            }
+        }
+    }
+}

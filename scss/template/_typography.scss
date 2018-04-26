@@ -1,0 +1,16 @@
+body {
+    font-family: "Josefin", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+a {
+    color: darken($primary, 10%);
+    text-decoration: none;
+    &:hover {
+        color: $secondary;
+        text-decoration: underline;
+    }
+    &:visited {
+        color: darken($primary, 30%);
+    }
+}
