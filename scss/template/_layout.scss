@@ -56,12 +56,33 @@ html, body, div.site {
     }
     form {
         label {
-            @include grid-column( 2 );
-            text-align: right;
+            @include grid-column( 12 );
+            text-align: center;
+        }
+        input {
+            background-color: $background-color;
+            color: $primary-color;
         }
         input[ type="text" ] {
-            background-color:$background-color;
-            @include grid-column( 8 );
+            @include grid-column( 12 );
+        }
+        input[ type="submit" ] {
+            padding: 1rem;
+            @include grid-column( 12 );
+        }
+
+        @include grid-media( $tablet-grid ) {
+            label {
+                @include grid-column( 2 );
+                text-align: right;
+            }
+            input[ type="text" ] {
+                @include grid-column( 8 );
+            }
+            input[ type="submit" ] {
+                @include grid-column( 4 );
+                @include grid-push( 4 );
+            }
         }
     }
 }

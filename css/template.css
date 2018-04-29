@@ -46,15 +46,37 @@ html, body, div.site {
     padding: 1rem;
     border: 1px gray; }
   .page-content form label {
-    width: calc(16.6666666667% - 23.3333333333px);
+    width: calc(100% - 40px);
     float: left;
     margin-left: 20px;
-    text-align: right; }
-  .page-content form input[type="text"] {
+    text-align: center; }
+  .page-content form input {
     background-color: #000000;
-    width: calc(66.6666666667% - 33.3333333333px);
+    color: #FFFFFF; }
+  .page-content form input[type="text"] {
+    width: calc(100% - 40px);
     float: left;
     margin-left: 20px; }
+  .page-content form input[type="submit"] {
+    padding: 1rem;
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px; }
+  @media only screen and (min-width: 400px) {
+    .page-content form label {
+      width: calc(16.6666666667% - 23.3333333333px);
+      float: left;
+      margin-left: 20px;
+      text-align: right; }
+    .page-content form input[type="text"] {
+      width: calc(66.6666666667% - 33.3333333333px);
+      float: left;
+      margin-left: 20px; }
+    .page-content form input[type="submit"] {
+      width: calc(33.3333333333% - 26.6666666667px);
+      float: left;
+      margin-left: 20px;
+      margin-left: calc(33.3333333333% - 26.6666666667px + 40px); } }
 
 .site-info {
   text-align: center; }
