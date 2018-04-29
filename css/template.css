@@ -36,6 +36,9 @@ html, body, div.site {
   content: "";
   display: block; }
 
+.site-info {
+  text-align: center; }
+
 .page-template-construction-page {
   animation-name: fade-in;
   animation-duration: 4s; }
@@ -49,10 +52,10 @@ html, body, div.site {
       margin-bottom: 2rem; }
       @media only screen and (min-width: 400px) {
         .page-template-construction-page div#content .centered-logo {
-          width: calc(83.33333% - 36.66667px);
+          width: calc(83.3333333333% - 36.6666666667px);
           float: left;
           margin-left: 20px;
-          margin-left: calc(8.33333% - 21.66667px + 40px); } }
+          margin-left: calc(8.3333333333% - 21.6666666667px + 40px); } }
       @media only screen and (min-width: 1000px) {
         .page-template-construction-page div#content .centered-logo {
           width: calc(50% - 30px);
