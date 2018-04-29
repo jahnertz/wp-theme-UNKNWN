@@ -24,7 +24,7 @@
 			-->
 			<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'UNKNWN' ), 'UNKNWN', '<a href="https://jhanrahan.com.au/">Jordan Han</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'UNKNWN' ), '<a href="https://github.com/jahnertz/wp-theme-UNKNWN/tree/master" >UNKNWN</a>', '<a href="https://jhanrahan.com.au/">Jordan Han</a>' );
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
