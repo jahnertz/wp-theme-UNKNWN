@@ -48,6 +48,24 @@ html, body, div.site {
     }
 }
 
+.page-content {
+    margin-top: 4rem;
+    td, th {
+        padding: 1rem;
+        border: 1px darken( $primary-color, 50% );
+    }
+    form {
+        label {
+            @include grid-column( 2 );
+            text-align: right;
+        }
+        input[ type="text" ] {
+            background-color:$background-color;
+            @include grid-column( 8 );
+        }
+    }
+}
+
 .site-info {
     text-align:center;
 }
