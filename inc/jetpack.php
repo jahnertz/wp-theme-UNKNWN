@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package UNKNWN_2017
+ * @package UNKNWN
  */
 
 /**
@@ -14,11 +14,11 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function unknwn_2017_jetpack_setup() {
+function unknwn_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'unknwn_2017_infinite_scroll_render',
+		'render'    => 'unknwn_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
@@ -28,7 +28,7 @@ function unknwn_2017_jetpack_setup() {
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'post-details' => array(
-			'stylesheet' => 'unknwn-2017-style',
+			'stylesheet' => 'unknwn-style',
 			'date'       => '.posted-on',
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
@@ -37,12 +37,12 @@ function unknwn_2017_jetpack_setup() {
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'unknwn_2017_jetpack_setup' );
+add_action( 'after_setup_theme', 'unknwn_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function unknwn_2017_infinite_scroll_render() {
+function unknwn_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

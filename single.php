@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package UNKNWN_2017
+ * @package UNKNWN
  */
 
 get_header(); ?>

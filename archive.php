@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package UNKNWN_2017
+ * @package UNKNWN
  */
 
 get_header(); ?>

@@ -1,13 +1,13 @@
 <?php
 /**
- * UNKNWN 2017 functions and definitions
+ * UNKNWN functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package UNKNWN_2017
+ * @package UNKNWN
  */
 
-if ( ! function_exists( 'unknwn_2017_setup' ) ) :
+if ( ! function_exists( 'unknwn_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'unknwn_2017_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function unknwn_2017_setup() {
+	function unknwn_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on UNKNWN 2017, use a find and replace
-		 * to change 'unknwn-2017' to the name of your theme in all the template files.
+		 * If you're building a theme based on UNKNWN, use a find and replace
+		 * to change 'unknwn' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'unknwn-2017', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'unknwn', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,7 @@ if ( ! function_exists( 'unknwn_2017_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'unknwn-2017' ),
+			'menu-1' => esc_html__( 'Primary', 'unknwn' ),
 		) );
 
 		/*
@@ -60,7 +60,7 @@ if ( ! function_exists( 'unknwn_2017_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'unknwn_2017_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'unknwn_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -81,7 +81,7 @@ if ( ! function_exists( 'unknwn_2017_setup' ) ) :
 		) );
 	}
 endif;
-add_action( 'after_setup_theme', 'unknwn_2017_setup' );
+add_action( 'after_setup_theme', 'unknwn_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -90,46 +90,46 @@ add_action( 'after_setup_theme', 'unknwn_2017_setup' );
  *
  * @global int $content_width
  */
-function unknwn_2017_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'unknwn_2017_content_width', 640 );
+function unknwn_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'unknwn_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'unknwn_2017_content_width', 0 );
+add_action( 'after_setup_theme', 'unknwn_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function unknwn_2017_widgets_init() {
+function unknwn_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'unknwn-2017' ),
+		'name'          => esc_html__( 'Sidebar', 'unknwn' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'unknwn-2017' ),
+		'description'   => esc_html__( 'Add widgets here.', 'unknwn' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'unknwn_2017_widgets_init' );
+add_action( 'widgets_init', 'unknwn_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function unknwn_2017_scripts() {
-	wp_enqueue_style( 'unknwn-2017-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'unknwn-2017-template-style', get_template_directory_uri() . '/css/template.css');
+function unknwn_scripts() {
+	wp_enqueue_style( 'unknwn-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'unknwn-template-style', get_template_directory_uri() . '/css/template.css');
 
 
-	wp_enqueue_script( 'unknwn-2017-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'unknwn-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'unknwn-2017-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'unknwn-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'unknwn_2017_scripts' );
+add_action( 'wp_enqueue_scripts', 'unknwn_scripts' );
 
 /**
  * Implement the Custom Header feature.

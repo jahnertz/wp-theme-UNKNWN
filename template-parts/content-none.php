@@ -4,14 +4,14 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package UNKNWN_2017
+ * @package UNKNWN
  */
 
 ?>
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'unknwn-2017' ); ?></h1>
+		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'unknwn' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -22,7 +22,7 @@
 				printf(
 					wp_kses(
 						/* translators: 1: link to WP admin new post page. */
-						__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'unknwn-2017' ),
+						__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'unknwn' ),
 						array(
 							'a' => array(
 								'href' => array(),
@@ -35,13 +35,13 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'unknwn-2017' ); ?></p>
+			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'unknwn' ); ?></p>
 			<?php
 				get_search_form();
 
 		else : ?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'unknwn-2017' ); ?></p>
+			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'unknwn' ); ?></p>
 			<?php
 				get_search_form();
 

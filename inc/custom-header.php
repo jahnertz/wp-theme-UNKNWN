@@ -8,33 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package UNKNWN_2017
+ * @package UNKNWN
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses unknwn_2017_header_style()
+ * @uses unknwn_header_style()
  */
-function unknwn_2017_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'unknwn_2017_custom_header_args', array(
+function unknwn_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'unknwn_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'unknwn_2017_header_style',
+		'wp-head-callback'       => 'unknwn_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'unknwn_2017_custom_header_setup' );
+add_action( 'after_setup_theme', 'unknwn_custom_header_setup' );
 
-if ( ! function_exists( 'unknwn_2017_header_style' ) ) :
+if ( ! function_exists( 'unknwn_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see unknwn_2017_custom_header_setup().
+	 * @see unknwn_custom_header_setup().
 	 */
-	function unknwn_2017_header_style() {
+	function unknwn_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*
