@@ -140,4 +140,11 @@ a {
   a:visited {
     color: #b3b3b3; }
 
+.site-info {
+  color: #333333; }
+  .site-info a {
+    color: #333333; }
+    .site-info a:hover {
+      color: #FFBE87; }
+
 /*# sourceMappingURL=template.css.map */

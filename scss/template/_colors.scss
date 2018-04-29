@@ -1,9 +1,10 @@
 $white: #FFFFFF;
 $background-color: #000000;
-$primary: #FFFFFF;
-$secondary: #FFBE87;
+$primary-color: #FFFFFF;
+$secondary-color: #FFBE87;
 
 body {
    background-color: $background-color; 
-   color: $white;
+   color: $primary-color;
 }
+

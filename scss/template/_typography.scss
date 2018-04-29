@@ -4,13 +4,23 @@ body {
 }
 
 a {
-    color: darken($primary, 10%);
+    color: darken($primary-color, 10%);
     text-decoration: none;
     &:hover {
-        color: $secondary;
+        color: $secondary-color;
         text-decoration: underline;
     }
     &:visited {
-        color: darken($primary, 30%);
+        color: darken($primary-color, 30%);
+    }
+}
+
+.site-info {
+    color: darken( $primary-color, 80% );
+    a {
+        color: darken( $primary-color, 80% );
+        &:hover {
+            color: $secondary-color;
+        }
     }
 }
