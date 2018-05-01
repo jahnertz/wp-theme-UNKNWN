@@ -48,7 +48,7 @@ html, body, div.site {
     }
 }
 
-.page-content {
+.site-content {
     padding: 2rem;
     max-width: 320px;
     margin: 0 auto;
@@ -78,14 +78,10 @@ html, body, div.site {
                 width: 100%;
             }
         }
-        // @include grid-media( $tablet-grid ) {
-        //     input {
-        //         &[ type = submit ]   {
-        //             @include grid-column( 8 );
-        //             @include grid-push( 2 );
-        //         }
-        //     }
-        // }
+        @include grid-media( $desktop-grid ) {
+            @include grid-column( 8 );
+            @include grid-push ( 2 );
+        }
     }
 }
 
