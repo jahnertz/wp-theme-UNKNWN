@@ -41,42 +41,28 @@ html, body, div.site {
   display: block; }
 
 .page-content {
-  margin-top: 4rem; }
-  .page-content td, .page-content th {
+  padding: 2rem;
+  max-width: 320px;
+  margin: 0 auto; }
+  @media only screen and (min-width: 400px) {
+    .page-content {
+      max-width: 720px; } }
+  @media only screen and (min-width: 1000px) {
+    .page-content {
+      max-width: 960px; } }
+  .page-content table td, .page-content table th {
+    vertical-align: top;
     padding: 1rem;
-    border: 1px gray; }
-  .page-content form label {
-    width: calc(100% - 40px);
-    float: left;
-    margin-left: 20px;
-    text-align: center; }
+    border: 1px solid #1a1a1a; }
   .page-content form input {
     background-color: #000000;
     color: #FFFFFF; }
-  .page-content form input[type="text"] {
-    width: calc(100% - 40px);
-    float: left;
-    margin-left: 20px; }
-  .page-content form input[type="submit"] {
-    padding: 1rem;
-    width: calc(100% - 40px);
-    float: left;
-    margin-left: 20px; }
-  @media only screen and (min-width: 400px) {
-    .page-content form label {
-      width: calc(16.6666666667% - 23.3333333333px);
-      float: left;
-      margin-left: 20px;
-      text-align: right; }
-    .page-content form input[type="text"] {
-      width: calc(66.6666666667% - 33.3333333333px);
-      float: left;
-      margin-left: 20px; }
-    .page-content form input[type="submit"] {
-      width: calc(33.3333333333% - 26.6666666667px);
-      float: left;
-      margin-left: 20px;
-      margin-left: calc(33.3333333333% - 26.6666666667px + 40px); } }
+    .page-content form input[type=submit] {
+      padding: 1rem;
+      text-align: center;
+      width: 100%; }
+    .page-content form input[type=text] {
+      width: 100%; }
 
 .site-info {
   text-align: center; }

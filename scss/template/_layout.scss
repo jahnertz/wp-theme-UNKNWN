@@ -49,41 +49,43 @@ html, body, div.site {
 }
 
 .page-content {
-    margin-top: 4rem;
-    td, th {
-        padding: 1rem;
-        border: 1px darken( $primary-color, 50% );
+    padding: 2rem;
+    max-width: 320px;
+    margin: 0 auto;
+    @include grid-media( $tablet-grid ) {
+        max-width: 720px;
+    }
+    @include grid-media( $desktop-grid ) {
+        max-width: 960px;
+    }
+    table {
+        td, th {
+            vertical-align: top;
+            padding: 1rem;
+            border: 1px solid darken( $primary-color, 90% );
+        }
     }
     form {
-        label {
-            @include grid-column( 12 );
-            text-align: center;
-        }
         input {
             background-color: $background-color;
             color: $primary-color;
-        }
-        input[ type="text" ] {
-            @include grid-column( 12 );
-        }
-        input[ type="submit" ] {
-            padding: 1rem;
-            @include grid-column( 12 );
-        }
-
-        @include grid-media( $tablet-grid ) {
-            label {
-                @include grid-column( 2 );
-                text-align: right;
+            &[ type = submit ] {
+                padding: 1rem;
+                text-align: center;
+                width: 100%;
             }
-            input[ type="text" ] {
-                @include grid-column( 8 );
-            }
-            input[ type="submit" ] {
-                @include grid-column( 4 );
-                @include grid-push( 4 );
+            &[ type = text ] {
+                width: 100%;
             }
         }
+        // @include grid-media( $tablet-grid ) {
+        //     input {
+        //         &[ type = submit ]   {
+        //             @include grid-column( 8 );
+        //             @include grid-push( 2 );
+        //         }
+        //     }
+        // }
     }
 }
 
