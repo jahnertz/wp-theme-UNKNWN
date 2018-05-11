@@ -177,4 +177,21 @@ a {
     .site-info a:hover {
       color: #FFBE87; }
 
+.site-content form {
+  color: #FFFFFF; }
+  .site-content form input {
+    background-color: #000000;
+    color: #FFFFFF; }
+    .site-content form input[type=submit] {
+      padding: 1rem;
+      text-align: center;
+      width: 100%; }
+    .site-content form input[type=text] {
+      width: 100%; }
+      .site-content form input[type=text]:focus {
+        background-color: white;
+        color: black;
+        outline: 1px solid #FFBE87;
+        box-shadow: 0 0 0 2px #FFBE87; }
+
 /*# sourceMappingURL=template.css.map */

@@ -24,3 +24,27 @@ a {
         }
     }
 }
+
+.site-content{
+    form {
+        color: $primary-color;
+        input {
+            background-color: $background-color;
+            color: $primary-color;
+            &[ type = submit ] {
+                padding: 1rem;
+                text-align: center;
+                width: 100%;
+            }
+            &[ type = text ] {
+                width: 100%;
+                &:focus {
+                    background-color: white;
+                    color: black;
+                    outline: 1px solid $secondary-color;
+                    box-shadow: 0 0 0 2px $secondary-color;
+                }
+            }
+        }
+    }
+}
