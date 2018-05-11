@@ -31,10 +31,6 @@ span.mobile-only {
     span.mobile-only {
       display: none; } }
 
-html, body, div.site {
-  height: 100%;
-  overflow: hidden; }
-
 .site-main div#content::after {
   clear: both;
   content: "";
