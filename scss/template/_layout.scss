@@ -66,18 +66,6 @@ html, body, div.site {
         }
     }
     form {
-        input {
-            background-color: $background-color;
-            color: $primary-color;
-            &[ type = submit ] {
-                padding: 1rem;
-                text-align: center;
-                width: 100%;
-            }
-            &[ type = text ] {
-                width: 100%;
-            }
-        }
         @include grid-media( $desktop-grid ) {
             @include grid-column( 8 );
             @include grid-push ( 2 );

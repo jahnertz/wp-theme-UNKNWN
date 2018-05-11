@@ -54,15 +54,6 @@ html, body, div.site {
     vertical-align: top;
     padding: 1rem;
     border: 1px solid #1a1a1a; }
-  .site-content form input {
-    background-color: #000000;
-    color: #FFFFFF; }
-    .site-content form input[type=submit] {
-      padding: 1rem;
-      text-align: center;
-      width: 100%; }
-    .site-content form input[type=text] {
-      width: 100%; }
   @media only screen and (min-width: 1000px) {
     .site-content form {
       width: calc(66.6666666667% - 33.3333333333px);
