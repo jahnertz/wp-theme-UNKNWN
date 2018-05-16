@@ -132,6 +132,44 @@ function unknwn_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'unknwn_scripts' );
 
+// stylize the wordpress login page:
+function unknwn_login_scripts() {
+	wp_enqueue_style( 'unknwn-login-style', get_template_directory_uri() . '/css/login.css' );
+	wp_enqueue_style( 'unknwn-login-style-map', get_template_directory_uri() . '/css/login.css.map' );
+}
+add_action( 'login_enqueue_scripts', 'unknwn_login_scripts' );
+
+// TODO: use custom logo on login form.
+// $custom_logo_id = get_theme_mod( 'custom_logo' );
+// $custom_logo_src = wp_get_attachement_image_src( $custom_logo_id, 'full' );
+
+function unknwn_login_logo () {
+	?>
+	<style type="text/css">
+		#login h1 a, .login h1 a {
+			background-image: none;
+/*			background-image: url( <?php echo get_stylesheet_directory_uri; ?>/images/site-login-logo.png );
+			height: 65px;
+			width: 320px;
+			background-size: 320px 65px;
+			background-repeat: no-repeat;
+			padding-bottom: 30px;
+*/		}
+	</style>
+	<?php
+}
+add_action( 'login_enqueue_scripts', 'unknwn_login_logo');
+
+function unknwn_login_logo_url () {
+	return home_url();
+}
+add_filter( 'login_headerurl', 'unknwn_login_logo_url' );
+
+function unknwn_login_logo_url_title() {
+	return 'unknwn';
+}
+add_filter( 'login_headertitle', 'unknwn_login_logo_url_title' );
+
 /**
  * Implement the Custom Header feature.
  */

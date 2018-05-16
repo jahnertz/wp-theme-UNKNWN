@@ -1,0 +1,17 @@
+// Styles for login page
+
+body.login {
+	background-color: black;
+	p.message {
+		background-color: #333333;
+		color: #eeeeee;
+	}
+	form#loginform {
+		background-color: #333333;
+		color: #eeeeee;
+		input {
+			background-color: black;
+			color: #eeeeee;
+		}
+	}
+}

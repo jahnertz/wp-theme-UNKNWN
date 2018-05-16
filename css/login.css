@@ -1,0 +1,13 @@
+body.login {
+  background-color: black; }
+  body.login p.message {
+    background-color: #333333;
+    color: #eeeeee; }
+  body.login form#loginform {
+    background-color: #333333;
+    color: #eeeeee; }
+    body.login form#loginform input {
+      background-color: black;
+      color: #eeeeee; }
+
+/*# sourceMappingURL=login.css.map */
