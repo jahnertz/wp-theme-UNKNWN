@@ -1,5 +1,5 @@
 wp-theme-UNKNWN
 ===
-A Wordpress theme originally created for https://UNKNWN.asia
+A simple dark Wordpress theme. 
 
 Based on the [_S](https://underscores.me/) starter theme.
